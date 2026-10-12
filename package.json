@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^15.2.4",
@@ -16,6 +17,7 @@
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "autoprefixer": "^10.4.18",
+    "cypress": "^16.1.1",
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.1.6",
     "next": "15.1.6",
