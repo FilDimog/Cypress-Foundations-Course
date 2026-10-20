@@ -46,6 +46,7 @@ export default function HeroCarousel() {
         {heroSlides.map((slide, index) => (
           <div
             key={index}
+            data-testid={`carusel-slide`}
             className={`absolute inset-0 transition-opacity duration-1000 ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
@@ -73,7 +74,7 @@ export default function HeroCarousel() {
           </div>
         ))}
       </div>
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20" data-testid="carousel-indicators">
         {heroSlides.map((_, index) => (
           <button
             key={index}

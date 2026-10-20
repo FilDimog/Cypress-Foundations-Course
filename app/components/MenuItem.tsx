@@ -7,8 +7,9 @@ export default function MenuItem({ pies }: { pies: Pie[] }) {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {pies.map((pie: Pie) => (
         <div
-          key={pie.id}
           className="bg-white rounded-lg shadow-md overflow-hidden"
+          key={pie.id}
+          data-testid={`pie-item`}
         >
           <div className="relative h-64 w-full">
             <Image
