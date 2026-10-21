@@ -24,4 +24,20 @@ describe('Bethany\'s Pie ShopHomepage', () => {
       cy.wrap($el).find('button').contains('Add to Cart').should('be.visible')
     })
 });
+
+it('ass a pie of the month to the cart', () => {
+    cy.get('[data-testid="pie-item"]').first().within(() => {
+      cy.get('button').contains('Add to Cart').click()
+    });
+
+    cy.get('[data-testid="cart-item-count"]').should('have.length', 1)
+
+
+  });
+
+  it('should navigate to the shop page when clicking on the "Shop Now" button', () => {
+    cy.get('[data-testid="shop-btn"]').click()
+    cy.url().should('include', '/shop')
+  });
+
 });

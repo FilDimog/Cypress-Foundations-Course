@@ -67,7 +67,7 @@ export default function HeroCarousel() {
                 {slide.title}
               </h1>
               <p className="text-xl mb-8 max-w-2xl">{slide.description}</p>
-              <Link href={slide.buttonLink} className="btn-primary">
+              <Link href={slide.buttonLink} className="btn-primary" data-testid={slide.buttonText === "Shop Now" ? "shop-btn" : undefined}>
                 {slide.buttonText}
               </Link>
             </div>

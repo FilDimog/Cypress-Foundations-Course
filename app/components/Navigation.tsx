@@ -61,7 +61,7 @@ export default function Navigation() {
               <FaShoppingCart className="mr-2" />
               Cart
               {itemCount > 0 && (
-                <span className="ml-2 bg-white text-[rgba(200,125,82,1)] rounded-full w-5 h-5 flex items-center justify-center text-sm">
+                <span data-testid="cart-item-count" className="ml-2 bg-white text-[rgba(200,125,82,1)] rounded-full w-5 h-5 flex items-center justify-center text-sm">
                   {itemCount}
                 </span>
               )}
