@@ -36,4 +36,26 @@ describe("Bethany's Pie Shop Homepage", () => {
     cy.get("[data-testid=carousal-shop-button").first().click();
     cy.url().should("include", "/shop");
   });
+
+  it("Clicking on Shop in the navigation will show the dropdown menu", () => {
+    cy.get("[data-testid=shop-dropdown]").should("not.be.visible");
+    cy.contains("button", "Shop").trigger("mouseover").should("be.visible");
+  });
+  
+  it("Navigate to All Pies", () => {
+    cy.contains("button", "Shop").trigger("mouseover");
+    cy.get("[data-testid=shop-dropdown]")
+      .should("be.visible")
+      .contains("shop")
+      .click();
+    cy.url().should("include", "/shop");
+  });
+
+  it("Navigate to Fruit Pies", () => {
+    cy.get("[data-testid=shop-dropdown]").trigger("mouseover").select("Fruit Pies").click().should("include", "/shop/fruit");
+  });
+
+  it("Navigate to Seasonal Pies", () => {
+    cy.get("[data-testid=shop-dropdown]").trigger("mouseover").select("Seasonal Pies").click().should("include", "/shop/seasonal");
+  });
 });

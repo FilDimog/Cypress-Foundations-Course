@@ -35,7 +35,7 @@ export default function Navigation() {
             <div className="relative group">
               <button className="nav-link">Shop</button>
               <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-1">
+                <div className="py-1" data-testid="shop-dropdown">
                   <Link href="/shop" className="dropdown-item">
                     All Pies
                   </Link>
